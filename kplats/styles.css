@@ -1,0 +1,693 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+body{
+    background-color: rgb(219, 219, 219);
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --hover_color: rgb(216, 76, 1);
+    --font_color:grey;
+    --dots:white;
+}
+body{
+    font-family: Consolas;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(203, 203, 203);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(216, 76, 1, 0.5);
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--hover_color);
+}
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding:20px 30px;
+    box-shadow: 0px 1px 5px 0 #000;
+    position: sticky;
+    top: 0;
+    z-index: 111111;
+}
+h1{
+    transition: 0.3s;
+    position: relative;
+    top: -1vh;
+}
+#title{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 1vw;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+h1:has(:hover) #title{
+    visibility: visible;
+}
+h1 a{
+    color: rgb(233, 191, 0);
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8vw;
+}
+h1 span{
+    color: var(--hover_color);
+}
+h1:hover{
+    transform: rotate(-10deg);
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.nav-hover,.nav-hover a,.fa{
+    color: var(--font_color);
+    font-size: 1vw;
+    font-weight: 510;
+}
+.nav-hover a,.pages > :last-child p:first-child a{
+    background-image: linear-gradient(#d99a5a, #d99a5a);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+}
+.nav-hover a:is(:hover,:focus,:active),.pages > :last-child p:first-child a:is(:hover,:focus,:active){
+    background-size: 100% 0.1em;
+}
+.fa{
+    font-size: 1vw;
+    font-weight: 400;
+}
+.fa-search,.fa-times{
+    color: #000;
+}
+.nav-hover a:hover,.nav-list .fa:hover{
+    color: var(--hover_color);
+}
+.bar{
+    position: sticky;
+    top: 12vh;
+    background: #e33d26;
+    z-index: 1001;
+    width: 100%;
+    padding: 10px 30px;
+}
+.srcharea{
+    width: 90%;
+}
+.subsrch{
+    width: 9%;
+}
+.subsrch,.srcharea{
+    padding-block: 10px;
+    display: inline-block;
+}
+.srcharea input,.subsrch button{
+    padding-block: 10px;
+    width: 100%;
+}
+.srcharea input{
+    outline: none;
+    padding-inline: 5px;
+    font-size: 1vw ;
+}
+.subsrch button{
+    height: 5.81vh;
+    background-color: #b92b19;
+    border: none;
+    position: relative;
+    left: -10px;
+    color: white;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+
+/* ========================================================= */
+
+#menu1,#menu2,#menu3{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bgimg1.png);
+    background-size:100% 100%;
+    color: white;
+    position: relative;
+}
+#menu1{
+    z-index: 111;
+}
+#menu2{
+    background-image: url(images/bgimg2.png);
+    margin-left: -100%;
+    transition: 2s;
+    z-index: 11;
+}
+#menu3{
+    background-image: url(images/bgimg3.png);
+    margin-left: -200%;
+    transition: 2s;
+    z-index: 1;
+}
+.center{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+#shake1,#shake2,#shake3{
+    font-size: 3.75vw;
+    font-weight: 800;
+    font-family: Segoe Print;
+    -webkit-text-stroke: 2px var(--hover_color);
+}
+.center button,#competition button{
+    margin-top: 15px;
+    font-size: 1.25vw;
+    font-family: Segoe Print;
+    background-color: var(--hover_color);
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.center button:hover{
+    background-color: rgb(147, 51, 0);
+    transform: scale(1.25);
+}
+
+
+.cp{
+    animation: horizontal-shaking 1.5s ease-in-out;
+}
+@keyframes horizontal-shaking {
+    0% { transform: translateY(0) }
+    25% { transform: translateY(15px) }
+    50% { transform: translateY(-20px) }
+    75% { transform: translateY(15px) }
+    100% { transform: translateY(0) }
+}
+
+.menus{
+    display: grid;
+    grid-template-columns: repeat(3,100%);
+    width: 100%;
+    overflow: hidden;
+}
+@keyframes menu1animation {
+    0%{
+        z-index: 111;
+        margin-left: 0;
+    }
+    95%{
+        margin-left: -100%;
+    }
+    100%{
+        margin-left: 0;
+    }
+}
+@keyframes menu2animation {
+    0%{
+        z-index: 111;
+        margin-left: -100%;
+    }
+    95%{
+        margin-left: -200%;
+    }
+    100%{
+        margin-left: -100%;
+    }
+}
+@keyframes menu3animation {
+    0%{
+        z-index: 111;
+        margin-left: -200%;
+    }
+    95%{
+        margin-left: -300%;
+    }
+    100%{
+        margin-left: -200%;
+    }
+}
+.menu1animation{
+    animation: menu1animation 2s 7s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.menu2animation{
+    animation: menu2animation 2s 7s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.menu3animation{
+    animation: menu3animation 2s 7s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+/* ======================================================= */
+h2{
+    font-family: "Raleway", sans-serif;
+    font-size: 2vw ;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-block: 50px;
+    text-align: center;
+}
+#all_choices{
+    width: 70%;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    gap: 10%;
+}
+.div1{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 10px;
+}
+.div3{
+    width: 40%;
+    aspect-ratio: 1/1;
+    background-color: rgb(216, 76, 1 , .6);
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    transition: .5s;
+    margin: auto;
+    transform: translateY(-50%);
+}
+.div3 p{
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    text-transform: capitalize;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.div3:hover{
+    background-color: var(--hover_color);
+    transform: scale(1.2) translateY(-40%);
+}
+.div2:has(.div4){
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.div2:has(.div3){
+    background-position: center;
+    background-size: cover; 
+}
+#chorba{
+    background-image: url(images/chorba.jpg); 
+}
+#chorba p{
+    font-size: 1.2vw;
+}
+#slata{
+    background-image: url(images/slata+mechouia.jpeg); 
+}
+#baklawa{
+    background-image: url(images/baklawa.png);
+}
+#jelbena{
+    background-image: url(images/jelbena.jpg);
+    background-size: 100%;
+}
+#tajine{
+    background-image: url(images/tajine2.jpg);
+    background-size: 100%;
+}
+#kosksi{
+    background-image: url(images/kosksi.jpg);
+    background-size: 150% 150%;
+}
+#lablebi{
+    background-image: url(images/lablebi.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+#kaak{
+    background-image: url(images/kaak\ warka.png);
+    background-size: 120% 120%;
+    background-position: center;
+}
+#zlebia{
+    background-image: url(images/zlebia.jpg);
+    background-position: center;
+    background-size: 150% 100%;
+}
+
+/* ====================================================== */
+
+#events{
+    width: 100%;
+    height: 70vh;
+    margin-block: 10vh;
+    /* background-color: grey; */
+    background-image: url(images/koujina.webp);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+#blackBG{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+#grps{
+    margin: auto;
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
+}
+#grps span{
+    font-size: 3rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    -webkit-text-stroke: .5px white;
+    font-size: 5vw;
+}
+h4{
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+#grps p{
+    color: white;
+    text-align: center;
+    font-size: 1.25vw;
+}
+#group p{
+    font-size: 1.15vw;
+}
+#cooking_period h4{
+    font-size: 1.6vw;
+}
+
+/* ============================================================ */
+
+#pages{
+    margin: auto;
+    width: 75%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+.pages{
+    background-color: rgb(45, 45, 45);
+    display: grid;
+    grid-template-rows: 30vh 20vh;
+}
+.pages > :first-child{
+    position: relative;
+}
+.pages :first-child div:not(:last-child){
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--hover_color);
+    padding: 5px;
+    border-radius: 50%;
+    width: 50px;
+    aspect-ratio: 1;
+}
+.pages i{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5vw;
+    color: white;
+}
+.pages :first-child div:not(:last-child):hover{
+    background-color: black;
+}
+.pages :first-child button{
+    /* visibility: hidden; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 68, 0, 0.548);
+    padding-block: 10px;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.vis{
+    visibility: hidden;
+}
+.lablebi > :first-child{
+    background-image: url(images/lablebi.jpg);
+    background-size: cover;
+}
+.jelbena > :first-child{
+    background-image: url(images/jelbena.jpg);
+    background-size: cover;
+}
+.slata_mechouia > :first-child{
+    background-image: url(images/slata+mechouia.jpeg);
+    background-size: cover;
+}
+.Makarouna > :first-child{
+    background-image: url(images/makarouna.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.Omek_houria > :first-child{
+    background-image: url(images/omek\ houria.jpg);
+    background-size: cover;
+}
+.tounsi > :first-child{
+    background-image: url(images/s7an\ tounsi.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.fricase > :first-child{
+    background-image: url(images/fricase.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.ijja > :first-child{
+    background-image: url(images/ijja.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.info{
+    padding: 20px;
+}
+.pages > :last-child p:first-child{
+    color: white;
+    font-size: 1.5vw;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+hr{
+    height: .5px;
+    border: none;
+    border-top: 1px solid rgb(137, 137, 137);
+    margin-block: 10px;
+}
+.pages > :last-child p:not(:first-child){
+    font-family: georgia, serif;
+    color: var(--font_color);
+    margin-top: 20px;
+    font-size: .75vw;
+}
+.pages > :last-child p:last-child{
+    color: white;
+}
+#btn_all{
+    /* font-family: "Raleway", sans-serif; */
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    border: 1px solid #333;
+    color: #333;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10vh;
+}
+#btn_all:hover{
+    color: #fff;
+    background-color: #333;
+}
+
+/* ========================================================== */
+
+#comming_events{
+    width: 100%;
+    height: 70vh;
+    margin-block: 20vh 10vh;
+    background-image: url(images/event-cooking.jpg);
+    background-size: cover;
+    background-position: 0 -180vh;
+    position: relative;
+    padding-top: 20px;
+}
+#comming_events h2{
+    color: white;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700 ;
+    letter-spacing: 3px;
+}
+#competition{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+#competition h3{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-block: 30px;
+}
+#competition p{
+    font-size: 1.5vw;
+    text-align:center;
+    margin-bottom: 10px;
+}
+#competition button{
+    color: black;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#competition button:hover{
+    background-color: rgb(147, 51, 0);
+}
+
+/* =========================================== */
+
+footer{
+    width: 100%;
+    background-image: url(images/pattern-bg.png);
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+#part1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin: auto;
+    gap: 10%;
+    margin-top: 50px;
+}
+#part1 h4{
+    letter-spacing: 3px;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+#part1 p{
+    font-size: 1vw;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    line-height: 30px;
+}
+#part1 .form{
+    margin: auto;
+    width: fit-content;
+}
+#part1 input,#part1 button{
+    font-size: 1.25vw;
+    padding: 10px;
+}
+#part1 button{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    margin-left: 2px;
+}
+#part1 input:focus{
+    outline: solid rgba(0, 0, 0, 0.3) 3px;
+}
+#part1 button:hover{
+    background-color: #000;
+}
+#part2{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-block: 5vh;
+    font-size: .85vw;
+}
+#part2 ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+#part2 a:hover{
+    border-bottom: 2px dotted white;
+}
