@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>rot_dez</h1>
+    <div id="rot_dez"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code">
+        <p><span class="orange">#rot_dez img</span><span class="yellow">{<br>
+        <span class="blue">transform</span>: rotate(<span class="green">0deg</span>) scale(<span class="green">1</span>);<br>
+        }</span><br>
+        <span class="orange">#rot_dez img:hover </span><span class="yellow">{<br>
+        <span class="blue">transform</span>: rotate(<span class="green">15deg</span>) scale(<span class="green">1.25</span>);<br>
+        }</span></p>
+        </span>
+    </div>
+    <h1>flou</h1>
+    <div id="flou"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code">
+        <p><span class="orange">#flou img </span><span class="yellow">{ <br>
+            &emsp;<span class="blue">filter</span>: blur(<span class="green">3px</span>);<br>
+        }</span><br>
+        <span class="orange">#flou img:hover</span><span class="yellow"> {<br>
+            &emsp;<span class="blue">filter</span>: blur(<span class="green">0px</span>);<br>
+        }</span></p>
+        
+    </span>
+    </div>
+    <h1>noir</h1>
+    <div id="noir"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#noir img</span> <span class="yellow">{<br>
+            &emsp;<span class="blue">filter</span>: grayscale(<span class="green">100%</span>);<br>
+        }</span><br>
+        <span class="orange">#noir img:hover</span><span class="yellow"> {<br>
+            &emsp;<span class="blue">filter</span>: grayscale(<span class="green">0%</span>);<br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>sepia</h1>
+    <div id="sepia"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#sepia img</span> <span class="yellow">{<br>
+            &emsp;<span class="blue">filter</span>: sepia(<span class="green">1</span>);<br>
+        }</span><br>
+        <span class="orange">#sepia img:hover</span><span class="yellow"> {<br>
+            &emsp;<span class="blue">filter</span>: sepia(<span class="green">0</span>);<br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>opacite_col</h1>
+    <div id="opacite_col">
+        <div class="redimg col"><img src="img1.png"></div>
+        <div class="greenimg col"><img src="img2.png"></div>
+        <div class="blueimg col"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#opacite_col .col:hover img</span><span class="yellow">{ <br>
+            &emsp;<span class="blue">filter</span>: opacity(<span class="green">50%</span>); <br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>zoom</h1>
+    <div id="zoom"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#zoom img:hover</span><span class="yellow">{ <br>
+            &emsp;<span class="blue">transform</span>: scale(<span class="green">1.5</span>); <br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>rotation</h1>
+    <div id="rotation"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#rotation img:hover</span><span class="yellow">{ <br>
+            &emsp;<span class="blue">transform</span>: rotate(<span class="green">-25deg</span>); <br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>dezoomer</h1>
+    <div id="dezoomer"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#dezoom img:hover</span><span class="yellow">{ <br>
+            &emsp;<span class="blue">transform</span>: scale(<span class="green">0.5</span>); <br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>ronde</h1>
+    <div id="ronde"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#ronde img:hover </span><span class="yellow">{ <br>
+            &emsp;<span class="blue">width</span>: <span class="green">130px</span>;<br>
+            &emsp;<span class="blue">height</span>: <span class="green">130px</span>;<br>
+            &emsp;<span class="blue">border-radius</span>: <span class="green">50%</span>;<br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>slide</h1>
+    <div id="slide"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#slide img:hover</span><span class="yellow">{ <br>
+            &emsp;<span class="blue">transform</span>: translateX(<span class="green">-20px</span>); <br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>morph</h1>
+    <div id="morph"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#slide img:hover</span><span class="yellow">{ <br>
+            &emsp;<span class="blue">width</span>: <span class="green">130px</span>;<br>
+            &emsp;<span class="blue">height</span>: <span class="green">130px</span>;<br>
+            &emsp;<span class="blue">border-radius</span>: <span class="green">50%</span>;<br>
+            &emsp;<span class="blue">transform</span>: rotate(<span class="green">-25deg</span>); <br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>opacite</h1>
+    <div id="opacite"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p>
+        <span class="orange">#opacite img:hover</span><span class="yellow">{ <br>
+            &emsp;<span class="blue">opacity</span>:<span class="green">60%</span>); <br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>flash</h1>
+    <div id="flash"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p class="flash">
+        <span class="orange">#flash img:hover </span><span class="yellow">{<br>
+            &emsp;<span class="blue">animation-name</span>: <span class="green">blinker</span>;<br>
+            &emsp;<span class="blue">animation-duration</span>: <span class="green">1s</span>;<br>
+            &emsp;<span class="blue">animation-iteration-count</span>: <span class="green">2</span>;<br>
+        }<br>
+        <span class="rose">@keyframes</span> <span class="blue">blinker</span> {<br>
+        &emsp;from {<br>
+        &emsp;&emsp;<span class="blue">opacity</span>: <span class="green">1</span>;<br>
+        &emsp;}<br>
+        &emsp;to {<br>
+        &emsp;&emsp;<span class="blue">opacity</span>: <span class="green">0</span>;<br>
+        &emsp;}<br>
+        }</span>
+    </p></span>
+    </div>
+    <h1>non</h1>
+    <div id="non"><div class="img"><img src="img1.png"><img src="img2.png"><img src="img3.png"></div>
+    <span class="code"><p class="non">
+        <span class="orange">#non img:hover </span><span class="yellow">{<br>
+            &emsp;<span class="blue">animation-name</span>: <span class="green">non</span>;<br>
+            &emsp;<span class="blue">animation-duration</span>: <span class="green">0.4s</span>;<br>
+            &emsp;<span class="blue">animation-fill-mode</span>: <span class="orange">forwards</span>;<br>
+        }<br>
+        <span class="rose">@keyframes</span> <span class="blue">blinker</span> {<br>
+        &emsp;0% {<br>
+        &emsp;&emsp;<span class="blue">transform</span>: translateX(<span class="green">0px</span>);<br>
+        &emsp;}<br>
+        &emsp;25% {<br>
+        &emsp;&emsp;<span class="blue">transform</span>: translateX(<span class="green">-10px</span>);<br>
+        &emsp;}<br>
+        &emsp;50% {<br>
+        &emsp;&emsp;<span class="blue">transform</span>: translateX(<span class="green">10px</span>);<br>
+        &emsp;}<br>
+        &emsp;75% {<br>
+        &emsp;&emsp;<span class="blue">transform</span>: translateX(<span class="green">-10px</span>);<br>
+        &emsp;}<br>
+        &emsp;100% {<br>
+        &emsp;&emsp;<span class="blue">transform</span>: translateX(<span class="green">0px</span>);<br>
+        &emsp;}<br>
+        }</span>
+    </p></span>
+    </div>
+</body>
+</html>

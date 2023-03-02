@@ -1,0 +1,228 @@
+img:not(.col img){
+    margin-inline: 50px;
+    transition: 0.5s;
+    width: 250px;
+    height: 200px;
+}
+h1{
+    font-family: system-ui;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.75rem;
+}
+div{
+    height: 250px;
+    width: fit-content;
+    margin: auto;
+}
+.code,.img{
+    display: inline-block;
+}
+p{
+    height: 250px;
+    font-family: arial;
+    transform: translateY(-30%);
+    letter-spacing: 2px;
+}
+.green{
+    color: rgb(117, 221, 129);
+}
+.yellow{
+    color: rgb(235, 235, 108);
+}
+.gold{
+    color: gold;
+}
+.blue{
+    color: rgb(106, 193, 255);
+}
+.orange{
+    color: orange;
+}
+.rose{
+    color: hotpink;
+}
+body{
+    background-color: #1e1e1e;
+    color: white;
+}
+#opacite_col .img{
+    width: 750px;
+    height: 400px;
+}
+.col{
+    display: inline-block;
+    width: 200px;
+    height: 400px;
+    margin-inline: 50px;
+}
+.col img{
+    transition: 0.5s;
+    width: 200px;
+    height: 280px;
+}
+.greenimg{
+    background-color: green;
+}
+.redimg{
+    background-color: red;
+}
+.blueimg{
+    background-color: blue;
+}
+#opacite_col{
+    height: 400px;
+}
+.flash{
+    transform: translateY(-10%);
+}
+.non{
+    position: relative;
+    top: 80px;
+    font-size: 15px;
+}
+#non .img{
+    position: relative;
+    top: -70px;
+}
+
+
+
+
+
+
+
+
+
+
+/* rot_dez */
+#rot_dez img{
+    transform: rotate(0deg) scale(1);
+}
+#rot_dez img:hover {
+    transform: rotate(15deg) scale(1.25);
+}
+/* flou */
+#flou img {
+    filter: blur(3px);
+}
+#flou img:hover {
+    filter: blur(0px);
+}
+/* noir */
+#noir img {
+    filter: grayscale(100%);
+}
+#noir img:hover {
+    filter: grayscale(0%);
+}
+/* sepia */
+#sepia img {
+    filter: sepia(1);
+}
+#sepia img:hover {
+    filter: sepia(0);
+}
+/* opacite_col */
+#opacite_col .col:hover img {
+    filter: opacity(50%);
+}
+/* zoom */
+#zoom img:hover{
+    transform: scale(1.5);
+}
+/* rotation */
+#rotation img:hover {
+    transform: rotate(-25deg);
+}
+/* dezoomer */
+#dezoomer img:hover {
+    transform: scale(0.5);
+}
+/* ronde */
+#ronde img:hover {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+/* slide */
+#slide img:hover {
+    transform: translateX(-20px);
+}
+/* morph */
+#morph img:hover {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    transform: rotate(360deg);
+}
+/* opacite */
+#opacite img:hover {
+    opacity: 60%;
+}
+/* flash */
+#flash img:hover {
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+}
+@keyframes blinker {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+/* hola */
+#hola div div {
+    position: relative;
+    left: 50px;
+    display: inline;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(8, 8, 8,0.027);
+    border-radius: 100%;
+    font-size: 0px;
+    z-index: 2;
+    opacity: 0;
+    box-shadow: 0 0 0 0 rgb(241, 239,239);
+    padding: 0;
+    margin: 0;
+}
+#hola div:hover .light {
+    animation: circle 0.75s infinite;
+}
+@keyframes circle {
+    to {
+    opacity: 0.5;
+    box-shadow: 0 0 0 180px rgba(255, 255, 255, 0.1);
+    }
+}
+/* non */
+#non img:hover {
+    animation: non 0.4s forwards;
+}
+@keyframes non {
+    0% {
+    transform: translateX(0px);
+    }
+    20% {
+    transform: translateX(-10px);
+    }
+    40% {
+    transform: translateX(10px);
+    }
+    50% {
+    transform: translateX(-10px);
+    }
+    60% {
+    transform: translateX(10px);
+    }
+    80% {
+    transform: translateX(-10px);
+    }
+    100% {
+    transform: translateX(0px);
+    }
+}
