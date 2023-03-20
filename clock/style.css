@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(45deg,darkgrey,white,darkgrey);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.clock{
+    border: black 5px solid;
+    background-color: rgb(183, 183, 183);
+    width: 25%;
+    aspect-ratio: 1;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.input{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 3%;
+    transform: translateX(-50%);
+}
+.input *{
+    font-size: 2.5vw;
+    margin-block: 5px;
+}
+.input input:hover{
+    background-color: lightgrey;
+}
+button{
+    padding: 10px;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: aquamarine;
+}
+.abs,p{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1vw;
+}
+p{
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    font-size: 4vw;
+    border-radius: 20px;
+    border: black 2px solid;
+    padding: 20px;
+}
+.cercle{
+    color: red;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.number12,.number9,.number6,.number3{
+    font-size: 3vw;
+}
+.number12{
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.number6{
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%,-100%);
+}
+.number3{
+    left: 100%;
+    top: 50%;
+    transform: translate(-150%,-50%);
+}
+.number9{
+    left: 0;
+    top: 50%;
+    transform: translate(50%,-50%);
+}
+.number1{
+    left: 70%;
+    top: 10%;
+    transform: rotate(30deg);
+}
+.number2{
+    left: 85%;
+    top: 25%;
+    transform: rotate(55deg);
+}
+.number4{
+    left: 85%;
+    top: 65%;
+    transform: rotate(-55deg);
+}
+.number5{
+    left: 70%;
+    top: 80%;
+    transform: rotate(-30deg);
+}
+.number11{
+    left: 30%;
+    top: 10%;
+    transform: rotate(-30deg);
+}
+.number10{
+    left: 15%;
+    top: 25%;
+    transform: rotate(-55deg);
+}
+.number8{
+    left: 15%;
+    top: 65%;
+    transform: rotate(55deg);
+}
+.number7{
+    left: 30%;
+    top: 80%;
+    transform: rotate(30deg);
+}
+#second,#minute,#heure{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(93, 93, 255, 0.384); */
+}
+.s_sec{
+    width: 3px;
+    height: 40%;
+    background-color: red;
+    position: relative;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+.m_min{
+    width: 5px;
+    height: 30%;
+    background-color: blue;
+    position: relative;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+.h_heu{
+    width: 8px;
+    height: 20%;
+    background-color: black;
+    position: relative;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+}
+@media (max-width:1024px) {
+    .clock{
+        width: 30%;
+    }
+    .abs{
+        font-size: 2vw;
+    }
+    .number12,.number9,.number6,.number3{
+        font-size: 5vw;
+    }
+    p{
+        font-size: 4vw;
+    }
+}
+@media (max-width:768px) {
+    .clock{
+        width: 50%;
+    }
+    .abs{
+        font-size: 3vw;
+    }
+    .number12,.number9,.number6,.number3{
+        font-size: 6vw;
+    }
+    p{
+        font-size: 5vw;
+    }
+}
+@media (max-width:480px) {
+    .clock{
+        width: 70%;
+    }
+    .abs{
+        font-size: 3vw;
+    }
+    .number12,.number9,.number6,.number3{
+        font-size: 8vw;
+    }
+    p{
+        font-size: 15vw;
+    }
+    .input *{
+        font-size: 5vw;
+    }
+}
