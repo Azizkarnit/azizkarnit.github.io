@@ -6,38 +6,72 @@
     <title>clock</title>
 </head>
 <body>
-    <div class="container">
-        <div class="input">
-            <label for="time">Insert Your Time</label>
-            <input type="time" name="" id="mytime"> <br>
-            <button type="button" id="mybutt">Submit</button>
+    <div class="all">
+        <div class="container1">
+            <div class="input">
+                <label for="time">Insert Your Time :</label>
+                <input type="time" name="" id="mytime"> <br>
+                <button type="button" id="sub">Submit</button>
+                <button type="reset" id="res">Reset</button>
+            </div>
+            <div class="clock">
+                <div class="number1 abs">|</div>
+                <div class="number2 abs">|</div>
+                <div class="number3 abs">3</div>
+                <div class="number4 abs">|</div>
+                <div class="number5 abs">|</div>
+                <div class="number6 abs">6</div>
+                <div class="number7 abs">|</div>
+                <div class="number8 abs">|</div>
+                <div class="number9 abs">9</div>
+                <div class="number10 abs">|</div>
+                <div class="number11 abs">|</div>
+                <div class="number12 abs">12</div>
+                <div class="cercle abs">&#9679;</div>
+                <div id="second">
+                    <div class="s_sec"></div>
+                </div>
+                <div id="minute">
+                    <div class="m_min"></div>
+                </div>
+                <div id="heure">
+                    <div class="h_heu"></div>
+                </div>
+            </div>
+            <p id="time">00;00;00</p>
         </div>
-        <div class="clock">
-            <div class="number1 abs">|</div>
-            <div class="number2 abs">|</div>
-            <div class="number3 abs">3</div>
-            <div class="number4 abs">|</div>
-            <div class="number5 abs">|</div>
-            <div class="number6 abs">6</div>
-            <div class="number7 abs">|</div>
-            <div class="number8 abs">|</div>
-            <div class="number9 abs">9</div>
-            <div class="number10 abs">|</div>
-            <div class="number11 abs">|</div>
-            <div class="number12 abs">12</div>
-            <div class="cercle abs">&#9679;</div>
-            <div id="second">
-                <div class="s_sec"></div>
-            </div>
-            <div id="minute">
-                <div class="m_min"></div>
-            </div>
-            <div id="heure">
-                <div class="h_heu"></div>
-            </div>
+        <div class="container2">
+            <h1>Time calculator</h1>
+            <form>
+                <select name="selec_time1" id="selec_time1">
+                    <option value="default">select your time type</option>
+                    <option value="houre">Houre</option>
+                    <option value="minute">Minute</option>
+                    <option value="second">Second</option>
+                </select> <br>
+                <label for="input1">Insert your first time</label>
+                <input type="number" name="input1" id="input1" required min="0"><br>
+                <!-- ====================================================================== -->
+                <select name="select" id="select">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                </select> <br>
+                <!-- ====================================================================== -->
+                <select name="selec_time2" id="selec_time2">
+                    <option value="default">select your time type</option>
+                    <option value="houre">Houre</option>
+                    <option value="minute">Minute</option>
+                    <option value="second">Second</option>
+                </select><br>
+                <label for="input2">Insert your second time</label>
+                <input type="number" name="input2" id="input2" required min="0"><br>
+                <hr>
+                <p id="select_value">= Result</p> <br>
+                <button type="button" id="calc">Calculate</button>
+            </form>
         </div>
-        <p id="time">00;00;00</p>
     </div>
+    
     <script src="index.js"></script>
 </body>
 </html>

@@ -5,15 +5,23 @@
 }
 body{
     background-image: linear-gradient(45deg,darkgrey,white,darkgrey);
+    font-family: system-ui;
 }
-.container{
+.all{
     width: 100%;
     height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
 }
+.container1,.container2{
+    position: relative;
+}
+/* ===================================container1==================================== */
 .clock{
     border: black 5px solid;
     background-color: rgb(183, 183, 183);
-    width: 25%;
+    width: 50%;
     aspect-ratio: 1;
     position: relative;
     left: 50%;
@@ -27,6 +35,7 @@ body{
     left: 50%;
     top: 3%;
     transform: translateX(-50%);
+    width: 100%;
 }
 .input *{
     font-size: 2.5vw;
@@ -38,17 +47,18 @@ body{
 button{
     padding: 10px;
     border-radius: 20px;
+    margin-inline: 50px;
 }
-button:hover{
+button:hover,input:hover,select:hover{
     background-color: aquamarine;
 }
-.abs,p{
+.abs,#time{
     position: absolute;
     width: fit-content;
     height: fit-content;
     font-size: 1vw;
 }
-p{
+#time{
     left: 50%;
     top: 80%;
     transform: translateX(-50%);
@@ -159,23 +169,71 @@ p{
     top: 30%;
     transform: translateX(-50%);
 }
+/* ===================================container2==================================== */
+h1{
+    text-align: center;
+    font-size: 5vw;
+}
+form{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 2.5vw;
+}
+select,button,input{
+    font-size: 1.25vw;
+    padding: 10px;
+    border-radius: 50px;
+    border: 3px orange solid;
+    background-color: rgb(254, 242, 220);
+}
+#selec_time1,#selec_time2,#calc{
+    width: 90%;
+}
+input{
+    width: 50%;
+}
+#select{
+    width: fit-content;
+}
+hr{
+    margin-block: 20px;
+    height: 5px;
+    background-color: black;
+}
+#calc{
+    font-size: 2.5vw;
+}
 @media (max-width:1024px) {
     .clock{
-        width: 30%;
+        width: 60%;
     }
     .abs{
         font-size: 2vw;
     }
+
     .number12,.number9,.number6,.number3{
         font-size: 5vw;
     }
-    p{
+    #time{
         font-size: 4vw;
+    }
+    select,button,input{
+        font-size: 2vw;
+        padding: 5px;
+        margin: 5px;
+    }
+    form{
+        font-size: 3vw;
+    }
+    #calc{
+        font-size: 3.5vw;
+        padding: 10px;
     }
 }
 @media (max-width:768px) {
     .clock{
-        width: 50%;
+        width: 70%;
     }
     .abs{
         font-size: 3vw;
@@ -183,8 +241,20 @@ p{
     .number12,.number9,.number6,.number3{
         font-size: 6vw;
     }
-    p{
+    #time{
         font-size: 5vw;
+    }
+    select,button,input{
+        font-size: 3vw;
+        padding: 5px;
+        margin: 5px;
+    }
+    form{
+        font-size: 3vw;
+    }
+    #calc{
+        font-size: 3.5vw;
+        padding: 10px;
     }
 }
 @media (max-width:480px) {
@@ -197,10 +267,14 @@ p{
     .number12,.number9,.number6,.number3{
         font-size: 8vw;
     }
-    p{
+    #time{
         font-size: 15vw;
     }
     .input *{
         font-size: 5vw;
+    }
+    .all{
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
     }
 }
