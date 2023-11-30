@@ -10,7 +10,7 @@ body{
     width: 80%;
     position: relative;
     left: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 fieldset{
     padding: 30px;
@@ -52,4 +52,14 @@ button{
 }
 button:hover{
     background-color: rgb(96, 193, 161);
+}
+iframe{
+    border: none;
+    margin-top: 10px;
+    width: 90%;
+    height: 50vh;
+    margin-left: 5%;
+}
+.hide{
+    display: none;
 }

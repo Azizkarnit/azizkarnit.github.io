@@ -28,7 +28,7 @@ legend{
     text-align: center;
     width: fit-content;
     margin: auto;    
-    margin-top: 10%;
+    margin-top: 20px;
 }
 .select2,.select3{
     margin: auto;
@@ -53,4 +53,14 @@ button{
 }
 button:hover{
     background-color: rgb(96, 193, 161);
+}
+iframe{
+    border: none;
+    margin-top: 10px;
+    width: 90%;
+    height: 40vh;
+    margin-left: 5%;
+}
+.hide{
+    display: none;
 }

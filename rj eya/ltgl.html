@@ -8,28 +8,33 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="" id="myForm">
     <div id="container">
+        
         <h1>Abonnement Train Grandes Lignes</h1>
         <div id="sel1">
             <select name="depart" id="depart">
-                <option value="depart" disabled>depart</option>
+                <option value="depart" id='str'disabled selected>depart</option>
                 <option value="Tunis">Tunis</option>
                 <option value="Sfax">Sfax</option>
                 <option value="Gafsa">Gafsa</option>
             </select>
         </div>
-        <div id="sel2">
+        <div id="sel2" class="hide">
             <select name="destination" id="destination">
-                <option value="destination" disabled>destination</option>
+                <option value="destination" disabled selected>destination</option>
                 <option value="Tunis">Tunis</option>
                 <option value="Sfax">Sfax</option>
                 <option value="Gafsa">Gafsa</option>
             </select>
         </div>
         <div id="btn">            
-            <button type="submit">Envoyer</button>
-            <button type="reset">Rétablir</button>
+            <button type="submit" disabled id="sub" onclick="unhide()">Envoyer</button>
+            <button type="reset" id="reset">Rétablir</button>
         </div>
     </div>
+</form>
+    <iframe src="pay.html" name="pay" class="hide" id="ifr"></iframe>
+    <script src="ltgl.js"></script>
 </body>
 </html>

@@ -9,12 +9,12 @@
 </head>
 <body>
     <div id="container">
-        <form action="">
+        <form action="" id="myForm">
             <fieldset><legend>abonnement Train</legend>
             <div id="select1">
                 
                 <select name="abn-train" id="abn-train" onselect="affiche()">
-                    <option value="Choisir_ligne" disabled selected>Choisir_ligne</option>
+                    <option value="Choisir_ligne" id="str" disabled selected>Choisir_ligne</option>
                     <option value="ul">Une seule ligne</option>
                     <option value="dl">Deux Ligne</option>
                 </select>
@@ -40,12 +40,13 @@
                 </div>
             </div>
             <div id="buttons">            
-                <button type="submit">Envoyer</button>
-                <button type="reset">Rétablir</button>
+                <button type="submit" disabled id="sub" onclick="unhide()">Envoyer</button>
+                <button type="reset" id="reset">Rétablir</button>
             </div>
         </fieldset>
         </form>
     </div>
+    <iframe src="pay.html" name="pay" class="hide" id="ifr"></iframe>
     <script src="lt.js"></script>
 </body>
 </html>

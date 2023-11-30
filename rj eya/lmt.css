@@ -15,7 +15,7 @@ body{
     grid-template-areas: "h1 h1" "side1 side2";
     gap: 20px;
 }
-form{
+#form1,#form2{
     width: fit-content;
     margin: auto;
 }
@@ -66,4 +66,14 @@ button{
 }
 button:hover{
     background-color: rgb(96, 193, 161);
+}
+iframe{
+    border: none;
+    margin-top: 50px;
+    width: 90%;
+    height: 50vh;
+    margin-left: 5%;
+}
+.hide{
+    display: none;
 }

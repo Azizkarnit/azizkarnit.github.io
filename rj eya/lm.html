@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="container">
-        <form id="myForm" onsubmit="return validateForm()">
+        <form id="myForm">
         <fieldset>
             <legend>Abonnement Metro</legend>
             <div id="inputs">
@@ -36,11 +36,12 @@
                 </div>
             </div>
             <div id="buttons">            
-                <button type="submit">Envoyer</button>
+                <button id="sub" type="submit" disabled onclick="unhide()">Envoyer</button>
                 <button type="reset">Rétablir</button>
             </div>
         </fieldset>
     </form></div>
+    <iframe src="pay.html" name="pay" class="hide" id="ifr"></iframe>
     
     <script src="lm.js"></script>
 </body>
