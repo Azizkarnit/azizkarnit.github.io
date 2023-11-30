@@ -1,0 +1,34 @@
+body{
+    font-family:system-ui, sans-serif;
+}
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    -webkit-text-stroke: 2px rgb(74, 74, 193);
+    color: transparent;
+
+}
+#moy_trans{
+    width: 100%;
+}
+ul{
+    list-style-image: url('arrow.png');
+}
+h3{
+    font-size: 1.5rem;
+    margin: 0;
+    color: rgb(189, 90, 243);
+}
+h3:hover{
+    cursor: pointer;
+    padding-left: 20px;
+    transition: .2s;
+}
+#map img{
+    width: 100%;
+}
+p{
+    font-size: 1rem;
+    margin: 10px;
+    font-weight: 600;
+}

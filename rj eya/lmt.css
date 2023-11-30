@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#container{
+    margin: auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .2fr 1fr;
+    grid-template-areas: "h1 h1" "side1 side2";
+    gap: 20px;
+}
+form{
+    width: fit-content;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    -webkit-text-stroke: 2px rgb(74, 74, 193);
+    color: transparent;
+    grid-area: h1;
+}
+#f1{
+    grid-area: side1;
+}
+#f2{
+    grid-area: side2;
+}
+fieldset{
+    padding: 30px;
+    border: rgb(0, 119, 255) 3px dashed;
+}
+legend{
+    -webkit-text-stroke: 1px black;
+    font-weight: 800;
+    font-size: 2rem;
+    color: rgb(72, 209, 255);
+}
+label{
+    font-size: 16px;
+    font-weight: 600;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px; /* Set the width */
+    height: 16px; /* Set the height */
+    border: 2px solid #000; /* Border for the checkbox */
+}
+button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: aquamarine;
+    color: rgb(43, 104, 226);
+}
+button:hover{
+    background-color: rgb(96, 193, 161);
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lt.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <form action="">
+            <fieldset><legend>abonnement Train</legend>
+            <div id="select1">
+                
+                <select name="abn-train" id="abn-train" onselect="affiche()">
+                    <option value="Choisir_ligne" disabled selected>Choisir_ligne</option>
+                    <option value="ul">Une seule ligne</option>
+                    <option value="dl">Deux Ligne</option>
+                </select>
+            </div>
+            <div id="sl2" class="select2 hide">
+                <div id="nord" class="flex">
+                    <label for="nord" class="customRadioLabel">Banleieu_Nord</label>
+                    <input type="radio" name="bn" id="nord">
+                </div>
+                <div id="sud"  class="flex">                    
+                    <label for="sud" class="customRadioLabel">Banleieu_Sud </label>
+                    <input type="radio" name="bn" id="sud">
+                </div>
+            </div>
+            <div id="sl3" class="hide select3">
+                <div id="nord2"  class="flex">
+                    <label for="nord2" class="customRadioLabel">Banleieu_Nord</label>
+                    <input type="radio" name="bnn" id="nord2" checked>
+                </div>
+                <div id="sud2"  class="flex">                    
+                    <label for="sud2" class="customRadioLabel">Banleieu_Sud </label>
+                    <input type="radio" name="bnnn" id="sud2" checked>
+                </div>
+            </div>
+            <div id="buttons">            
+                <button type="submit">Envoyer</button>
+                <button type="reset">Rétablir</button>
+            </div>
+        </fieldset>
+        </form>
+    </div>
+    <script src="lt.js"></script>
+</body>
+</html>

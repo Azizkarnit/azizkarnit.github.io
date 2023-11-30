@@ -1,0 +1,29 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    -webkit-text-stroke: 2px rgb(74, 74, 193);
+    color: transparent;
+}
+h2{
+    background-color: lightblue;
+    border-radius: 50px;
+    padding: 10px;
+    padding-left: 20px;
+    color: blue;
+}
+h2:hover{
+    cursor: pointer;
+    padding-left: 40px;
+    transition: .2s;
+}
+div{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+img{
+    width: 90%;
+}

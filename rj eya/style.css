@@ -1,0 +1,90 @@
+*:not(ul){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('bg.png');
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    background-color: beige;
+}
+.img_header{
+    width: 15%;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+h1{
+    display: grid;
+    text-align: center;
+    width: 70%;
+}
+h1 p{
+    font-size: 70%;
+    width: 100%;
+    place-self: center;
+}
+#container{
+    width: 100%;
+    display: grid;
+    height: 75vh;
+    grid-template-columns: .5fr 1.5fr 0.5fr;
+    grid-template-rows: 1.5fr .1fr 1.5fr;
+    grid-template-areas: 
+    "nav div aside1"
+    "nav div aside2"
+    "nav div aside3";
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(0, 132, 255);
+    transition: .2s;
+}
+/* ==============nav================ */
+nav{
+    /* background-color: aqua; */
+    grid-area: nav;
+}
+nav ul{
+    font-size: 1.25rem;
+    font-weight: 600;
+    list-style-image: url('train.png'); /* or metro.png */
+}
+.ttr{
+    list-style-image: url('metro.png');
+}
+/* ==========asides================== */
+#aside1{
+    /* background-color: rgb(40, 41, 33); */
+    grid-area: aside1;
+}
+#aside2{
+    /* background-color: cornflowerblue; */
+    grid-area: aside2;
+}
+#aside3{
+    /* background-color: rgb(224, 224, 31); */
+    grid-area: aside3;
+}
+/* ================div================== */
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+#div{
+    /* background-color: lightblue; */
+    grid-area: div;
+}
