@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+body{
+    color-scheme: dark;
+}
+h1{
+    text-align: center;
+    grid-area: h1;
+    width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 1px black;
+}
+#container{
+    position: relative;
+    width: 20%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 2fr .75fr;
+    grid-template-areas: 'h1''img''scroll';
+}
+#imgs{
+    position: relative;
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+}
+#scrolls{
+    grid-area: scroll;
+}
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#b1,#f1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.rot{
+    transform: rotateY(-90deg);
+}
+#b1{
+    transform: rotateY(-90deg);
+    opacity: 0;
+}
+.f1{
+    animation: flip1 2s;
+}
+.b1{
+    animation: flip2 4s;
+}
+.f2{
+    animation: flip2 4s;
+}
+@keyframes flip1 {
+    to{
+        transform: rotateY(90deg);
+    }
+}
+@keyframes flip2 {
+    0%{
+        transform: rotateY(-90deg);
+    }
+    50%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(90deg);
+    }
+}
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+p{
+    text-align: center;
+    border: 1px black solid;
+    padding: 5px;
+    color: white;
+    background-color: grey;
+}
+@media screen and (max-width: 767px) {
+    #container {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+/* Media query for larger screens (PC, tablets, etc.) */
+@media screen and (min-width: 768px) {
+    #container {
+        margin: auto;
+        width: 40%;
+        height: 100vh;
+    }
+}
