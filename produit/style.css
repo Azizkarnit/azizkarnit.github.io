@@ -78,12 +78,23 @@ input[type="range"] {
     width: 100%;
     margin-bottom: 10px;
 }
-p{
+#hex{
     text-align: center;
     border: 1px black solid;
     padding: 5px;
-    color: white;
     background-color: grey;
+}
+input[type='text']{
+    color: black;
+    background-color: lightgray;
+}
+button{
+    background-color: darkslategrey;
+    padding-inline: 5px;
+}
+button:hover{
+    background-color: rgb(33, 55, 55);
+
 }
 @media screen and (max-width: 767px) {
     #container {
@@ -91,7 +102,6 @@ p{
         height: 100vh;
     }
 }
-
 /* Media query for larger screens (PC, tablets, etc.) */
 @media screen and (min-width: 768px) {
     #container {

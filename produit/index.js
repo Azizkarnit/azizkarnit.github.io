@@ -352,10 +352,21 @@ const redSlider = document.getElementById('red');
         let new_result = result_string.substring(8, result_string.length - 1);
         document.getElementById('fw').style.filter = new_result;
         document.getElementById('bw').style.filter = new_result;
-        document.getElementById('text').innerText = hexColor;
+        document.getElementById('text').value = hexColor;
         document.getElementById('h1').style.color = hexColor;
     }
-
+function submit() {
+  const hex = document.getElementById('text').value;
+  const rgb = hexToRgb(hex);
+  const color = new Color(rgb[0], rgb[1], rgb[2]);
+  const solver = new Solver(color);
+  const result = solver.solve();
+  const result_string = result.filter;
+  let new_result = result_string.substring(8, result_string.length - 1);
+  document.getElementById('fw').style.filter = new_result;
+  document.getElementById('bw').style.filter = new_result;
+  document.getElementById('h1').style.color = hex;
+}
     function rgbToHex(r, g, b) {
       const red = parseInt(r, 10).toString(16).padStart(2, '0');
       const green = parseInt(g, 10).toString(16).padStart(2, '0');
