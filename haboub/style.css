@@ -16,7 +16,7 @@ body{
 #container{
     /* opacity: 0; */
 
-    width: 60%;
+    width: fit-content;
     height: 80vh;
     /* background-color: red; */
     display: grid;
@@ -52,12 +52,12 @@ button:hover{
     opacity: 0;
 }
 #wrapper1,#wrapper2,#wrapper3{
-
+    padding: 20px;
     display: grid;
     place-items: center;
     font-size: 1.75rem;
     position: absolute;
-    width: 60%;
+    width: 40%;
     border-radius: 20px;
     height: 80vh;
     background-color: white;

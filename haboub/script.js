@@ -1,4 +1,4 @@
-let count = 2;
+let count = 0;
 let container = document.getElementById('container')
 let wrapper1 = document.getElementById('wrapper1')
 let wrapper2 = document.getElementById('wrapper2')
